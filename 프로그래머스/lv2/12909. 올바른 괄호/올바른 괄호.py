@@ -11,7 +11,4 @@ def solution(s):
         
         stack.pop()
     
-    if stack:
-        return False
-        
-    return True
+    return not stack
