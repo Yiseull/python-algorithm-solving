@@ -1,5 +1,5 @@
 def solution(n):
-    answer = 0
+    answer = 1
     numbers = [i for i in range(1, n + 1)]
     start, end = 0, 0
     sum = 1
@@ -14,4 +14,4 @@ def solution(n):
             end += 1
             sum += numbers[end]
             
-    return answer + 1
+    return answer
