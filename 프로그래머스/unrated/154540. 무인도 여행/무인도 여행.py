@@ -14,10 +14,8 @@ def bfs(i, j, maps, visited, n, m) -> int:
                 queue.append((next_y, next_x))
                 visited[next_y][next_x] = True
                 count += int(maps[next_y][next_x])
-                
-    return count
-    
 
+    return count
 
 
 def solution(maps) -> list:
@@ -28,4 +26,5 @@ def solution(maps) -> list:
         for j in range(m):
             if maps[i][j] != 'X' and not visited[i][j]:
                 answer.append(bfs(i, j, maps, visited, n, m))
+
     return sorted(answer) if answer else [-1]
