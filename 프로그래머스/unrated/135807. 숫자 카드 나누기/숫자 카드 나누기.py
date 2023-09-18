@@ -1,21 +1,18 @@
-def check_condition(gcd, array) -> int:
+from math import gcd
+
+
+def check_condition(a, array) -> int:
     for x in array:
-        if x % gcd == 0:
+        if x % a == 0:
             return 0
-    return gcd
-
-
-def calculate_gcd(a, b) -> int:
-    while b:
-        a, b = b, a % b
     return a
 
 
 def calculate_all_gcd(array, n) -> int:
-    gcd = max(1, calculate_gcd(array[0], array[1]))
+    a = max(1, gcd(array[0], array[1]))
     for i in range(2, n):
-        gcd = calculate_gcd(gcd, array[i])
-    return gcd
+        a = gcd(a, array[i])
+    return a
     
 
 def solution(arrayA, arrayB) -> int:
