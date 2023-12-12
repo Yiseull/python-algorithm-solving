@@ -1,6 +1,8 @@
 # 
 # 백준 & 프로그래머스 & LeetCode 문제 풀이 목록
 
+## 📚 LeetCode
+|0125-valid-palindrome|[풀이 보기](./LeetCode/0125-valid-palindrome/NOTES.md)|
 ## 📚 백준
 ### 🚀 Bronze
 | 문제번호 | 풀이 |
