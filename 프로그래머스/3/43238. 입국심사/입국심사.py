@@ -1,5 +1,5 @@
 def solution(n, times) -> int:
-    start, end = 1, n * max(times)
+    start, end = 1, n * times[0]
     
     while start < end:
         mid = (start + end) // 2
