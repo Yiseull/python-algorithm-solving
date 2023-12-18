@@ -3,6 +3,7 @@
 
 ## 📚 LeetCode
 |0125-valid-palindrome|[풀이 보기](./LeetCode/0125-valid-palindrome/NOTES.md)|
+|0704-binary-search|[풀이 보기](./LeetCode/0704-binary-search/0704-binary-search.py)|
 ## 📚 백준
 ### 🚀 Bronze
 | 문제번호 | 풀이 |
