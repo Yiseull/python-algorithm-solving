@@ -2,6 +2,7 @@
 # 백준 & 프로그래머스 & LeetCode 문제 풀이 목록
 
 ## 📚 LeetCode
+|0033-search-in-rotated-sorted-array|[풀이 보기](./LeetCode/0033-search-in-rotated-sorted-array/0033-search-in-rotated-sorted-array.py)|
 |0125-valid-palindrome|[풀이 보기](./LeetCode/0125-valid-palindrome/NOTES.md)|
 |0704-binary-search|[풀이 보기](./LeetCode/0704-binary-search/0704-binary-search.py)|
 ## 📚 백준
