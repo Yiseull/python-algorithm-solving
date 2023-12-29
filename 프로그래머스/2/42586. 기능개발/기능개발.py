@@ -1,19 +1,18 @@
-
 from collections import deque
 from math import ceil
 
 def solution(progresses, speeds):
     answer = []
-    periods = []
+    days = []
     
     for i, progress in enumerate(progresses):
-        periods.append(ceil((100 - progress) / speeds[i]))    
+        days.append(ceil((100 - progress) / speeds[i]))    
         
-    cnt, pre = 0, periods[0]
-    for period in periods:
-        if period > pre:
+    cnt, pre = 0, days[0]
+    for day in days:
+        if day > pre:
             answer.append(cnt)
-            cnt, pre = 1, period
+            cnt, pre = 1, day
         else:
             cnt += 1
     answer.append(cnt)
