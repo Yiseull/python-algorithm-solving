@@ -7,11 +7,6 @@ def solution(gems: list) -> list:
     n, m = len(gems), len(set(gems))
     i, j = 0, 0
     while j < n:
-        if j - i < m:
-            gem_dict[gems[j]] += 1
-            j += 1
-            continue
-        
         if len(gem_dict) == m:
             if answer[1] - answer[0] > j - i:
                 answer = [i, j]
