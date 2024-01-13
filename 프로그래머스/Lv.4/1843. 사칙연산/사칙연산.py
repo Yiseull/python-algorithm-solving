@@ -1,18 +1,12 @@
 def solution(arr: list) -> int:
-    nums = []
-    for i in range(len(arr)):
-        if arr[i].isdigit():
-            nums.append(int(arr[i]))
-    
     n = len(arr) // 2 + 1
     min_dp = [[1e9] * n for _ in range(n)]
     max_dp = [[-1e9] * n for _ in range(n)]
-    for step in range(n):
+    for i in range(n):
+        min_dp[i][i] = max_dp[i][i] = int(arr[i * 2])
+
+    for step in range(1, n):
         for i in range(n - step):
-            if step == 0:
-                min_dp[i][i] = max_dp[i][i] = nums[i]
-                continue
-            
             j = i + step
             for k in range(i, j):
                 if arr[k * 2 + 1] == '+':
