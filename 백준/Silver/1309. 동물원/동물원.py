@@ -1,7 +1,3 @@
-import sys
-input = sys.stdin.readline
-
-
 def solution(n: int) -> int:
         a, b = 1, 1
         for i in range(n - 1):
