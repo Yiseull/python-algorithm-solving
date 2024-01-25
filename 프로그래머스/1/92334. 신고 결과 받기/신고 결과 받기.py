@@ -3,18 +3,17 @@
 2. 신고자들의 신고 횟수가 k 이상이면 신고한 이용자들의 answer 배열의 값을 +1 한다. -> O(n^2) -> O(1,000,000)
 '''
 def solution(id_list: list, report: list, k: int) -> list:
-    answer = {id : 0 for id in id_list}
-    report_dict = dict()
-    for r in report:
+    answer, report_dict = dict(), dict()
+    for id in id_list:
+        answer[id], report_dict[id] = 0, set()
+    
+    for r in set(report):
         user, reported = r.split()
-        if reported not in report_dict:
-            report_dict[reported] = set()
         report_dict[reported].add(user)
         
     for values in report_dict.values():
-        if len(values) < k:
-            continue
-        for user in values:
-            answer[user] += 1
+        if len(values) >= k:
+            for user in values:
+                answer[user] += 1
     
     return list(answer.values())
