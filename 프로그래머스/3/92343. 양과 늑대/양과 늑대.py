@@ -1,6 +1,11 @@
 '''
-1. 처음에 방문할 그래프에 시작 노드를 담고 방문한다.
-2. (1) 노드를 방문하고 양과 늑대의 갯수를 업데이트 한다. (2) 양의 수가 더 많은 경우 정답값을 업데이트 한다. (3) 만약 늑대의 수가 더 높으면 return 한다. (3) 방문할 그래프에 자식 노드를 담고 자신을 제외한다. (4) 방문할 노드가 없으면 return 한다. (5) 방문할 리스트를 dfs로 하나씩 방문한다.
+DFS 로직 순서
+1. 노드를 방문하고 양과 늑대의 갯수를 업데이트 한다. 
+2. 양의 수가 더 많은 경우 정답값을 업데이트 한다. 
+3. 만약 늑대의 수가 더 높으면 return 한다. 
+4. 방문할 리스트에 자신을 제외하고 자식 노드를 담는다. 이때 새로운 리스트를 만든다.
+5. 방문할 리스트가 비어있으면 return 한다. 
+6. 방문할 리스트를 dfs로 하나씩 방문한다.
 '''
 def dfs(info: list, graph: list, visit: list, node: int, sheep: int, wolf: int) -> None:
     if info[node] == 0: sheep += 1
@@ -30,6 +35,7 @@ def solution(info: list, edges: list) -> int:
     graph = [[] for _ in range(len(info))]
     for parent, child in edges:
         graph[parent].append(child)
-    visit = [0]
-    dfs(info, graph, visit, 0, 0, 0)
+        
+    dfs(info, graph, [0], 0, 0, 0)
+    
     return answer
