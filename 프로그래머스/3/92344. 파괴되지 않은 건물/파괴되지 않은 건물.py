@@ -1,4 +1,4 @@
-def solution(board, skill):
+def solution(board: list, skill: list) -> int:
     answer = 0
     n, m = len(board), len(board[0])
     skill_board = [[0] * m for _ in range(n)]
@@ -21,8 +21,7 @@ def solution(board, skill):
         
     for i in range(n):
         for j in range(m):
-            board[i][j] += skill_board[i][j]
-            if board[i][j] > 0:
+            if board[i][j] + skill_board[i][j] > 0:
                 answer += 1
             
     return answer
