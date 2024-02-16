@@ -24,6 +24,7 @@
 |1915. 가장 큰 정사각형|[풀이 보기](./%EB%B0%B1%EC%A4%80/Gold/1915.%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%ED%81%B0%E2%80%85%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95/README.md)|
 |2638. 치즈|[풀이 보기](./%EB%B0%B1%EC%A4%80/Gold/2638.%E2%80%85%EC%B9%98%EC%A6%88/README.md)|
 |7576. 토마토|[풀이 보기](./%EB%B0%B1%EC%A4%80/Gold/7576.%E2%80%85%ED%86%A0%EB%A7%88%ED%86%A0/README.md)|
+|8983. 사냥꾼|[풀이 보기](./%EB%B0%B1%EC%A4%80/Gold/8983.%E2%80%85%EC%82%AC%EB%83%A5%EA%BE%BC/README.md)|
 |9663. N－Queen|[풀이 보기](./%EB%B0%B1%EC%A4%80/Gold/9663.%E2%80%85N%EF%BC%8DQueen/README.md)|
 ### 🚀 Gold V
 | 문제번호 | 풀이 |
