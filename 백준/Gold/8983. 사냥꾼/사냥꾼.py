@@ -1,21 +1,15 @@
-from heapq import *
+from bisect import bisect_left, bisect_right
 import sys
 input = sys.stdin.readline
 
 
 def solution(m: int, n: int, l: int, positions: list, animals: list) -> int:
-    animals = sorted([[min(x + y - l, x - y + l), max(y - x - l, x - y + l)] for x, y in animals])
     positions.sort()
-    heap = []
-    answer, i = 0, 0
-    for x1, x2 in animals:
-        if positions[i] < x1:
-            answer += len(heap)
-            heap = []
-            i += 1
-        if positions[i] <= x2:
-            heappush(heap, x2)
-    return answer + len(heap)
+    answer = 0
+    for x, y in animals:
+        if bisect_right(positions, x - y + l) - bisect_left(positions, x + y - l) > 0:
+            answer += 1
+    return answer
 
 
 if __name__ == '__main__':
