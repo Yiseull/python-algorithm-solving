@@ -33,6 +33,7 @@
 ### 🚀 Silver
 | 문제번호 | 풀이 |
 | ----- | ----- |
+|10025. 게으른 백곰|[풀이 보기](./%EB%B0%B1%EC%A4%80/Silver/10025.%E2%80%85%EA%B2%8C%EC%9C%BC%EB%A5%B8%E2%80%85%EB%B0%B1%EA%B3%B0/README.md)|
 |1051. 숫자 정사각형|[풀이 보기](./%EB%B0%B1%EC%A4%80/Silver/1051.%E2%80%85%EC%88%AB%EC%9E%90%E2%80%85%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95/README.md)|
 |10799. 쇠막대기|[풀이 보기](./%EB%B0%B1%EC%A4%80/Silver/10799.%E2%80%85%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/README.md)|
 |1244. 스위치 켜고 끄기|[풀이 보기](./%EB%B0%B1%EC%A4%80/Silver/1244.%E2%80%85%EC%8A%A4%EC%9C%84%EC%B9%98%E2%80%85%EC%BC%9C%EA%B3%A0%E2%80%85%EB%81%84%EA%B8%B0/README.md)|
