@@ -1,15 +1,11 @@
 from bisect import bisect_left
+from collections import defaultdict
 
 
 def solution(info, query):
     answer = []
-    info_dict = {}
-    for lang in ('cpp', 'java', 'python', '-'):
-        for job in ('backend', 'frontend', '-'):
-            for career in ('junior', 'senior', '-'):
-                for food in ('chicken', 'pizza', '-'):
-                    info_dict[(lang, job, career, food)] = []
-                    
+    info_dict = defaultdict(list)
+    
     for i in info:
         data = i.split()
         for lang in (data[0], '-'):
