@@ -1,33 +1,22 @@
+'''
+처리 가능한 작업 중에 소요시간이 가장 작은 작업을 선택한다.
+'''
 from heapq import *
 
 
 def solution(jobs: list) -> int:
-    jobs.sort(key=lambda x: (x[0], x[1]))
-    answer = jobs[0][1]
-    now = jobs[0][0] + jobs[0][1]
-    i = 1
+    answer, current = 0, 0
     heap = []
-
-    while i < len(jobs):
-        if jobs[i][0] <= now:
-            heappush(heap, (jobs[i][1], jobs[i][0]))
-            i += 1
-            continue
-
-        while heap and jobs[i][0] > now:
-            now += heap[0][0]
-            answer += now - heap[0][1]
-            heappop(heap)
-
-        if not heap and jobs[i][0] > now:
-            now = jobs[i][0] + jobs[i][1]
-            answer += jobs[i][1]
-            i += 1
-            continue
-
+    for job in sorted(jobs):
+        while heap and current < job[0]:
+            current = max(current, heap[0][1])
+            answer += current + heap[0][0] - heap[0][1]
+            current += heappop(heap)[0]
+        heappush(heap, (job[1], job[0]))
+        
     while heap:
-        now += heap[0][0]
-        answer += now - heap[0][1]
-        heappop(heap)
-
+        current = max(current, heap[0][1])
+        answer += current + heap[0][0] - heap[0][1]
+        current += heappop(heap)[0]
+            
     return answer // len(jobs)
