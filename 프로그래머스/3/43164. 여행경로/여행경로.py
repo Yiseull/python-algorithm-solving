@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def dfs(n: int, tickets_dict: dict, start: int, cnt: int) -> None:
+def dfs(n: int, tickets_dict: dict, start: int, cnt: int) -> list:
         if cnt == n:
             return [start]
         
@@ -13,12 +13,12 @@ def dfs(n: int, tickets_dict: dict, start: int, cnt: int) -> None:
             result = dfs(n, tickets_dict, city, cnt + 1)
             tickets_dict[start][i] = city
             
-            if result != -1:
+            if result:
                 return [start] + result
-            
-        return -1
-    
+        
+        return []
 
+    
 def solution(tickets: list) -> list:
     n = len(tickets)
     tickets_dict = defaultdict(list)
