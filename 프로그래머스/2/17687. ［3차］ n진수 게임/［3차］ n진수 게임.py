@@ -18,5 +18,4 @@ def solution(n: int, t: int, m: int, p: int) -> list:
         answer += change_base_n(n, i)
         i += 1
         
-    answer = list(answer)
-    return ''.join(answer[p - 1:last_time:m])
+    return ''.join(list(answer)[p - 1:last_time:m])
