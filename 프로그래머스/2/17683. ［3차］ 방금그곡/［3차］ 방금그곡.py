@@ -4,14 +4,17 @@ def calcultate_playingtime(start: str, end: str) -> int:
     return (end_h * 60 + end_m) - (start_h * 60 + start_m)
 
 
+def change_rower(sheet: str) -> str:
+    return sheet.replace('C#', 'c').replace('D#', 'd').replace('F#', 'f').replace('G#', 'g').replace('A#', 'a').replace('B#', 'b')
+
 
 def solution(m: str, musicinfos: list) -> str:
     answer = ['', 0]
     
-    m = m.replace('C#', 'c').replace('D#', 'd').replace('F#', 'f').replace('G#', 'g').replace('A#', 'a').replace('B#', 'b')
+    m = change_rower(m)
     for musicinfo in musicinfos:
         start, end, title, sheet = musicinfo.split(',')
-        sheet = sheet.replace('C#', 'c').replace('D#', 'd').replace('F#', 'f').replace('G#', 'g').replace('A#', 'a').replace('B#', 'b')
+        sheet = change_rower(sheet)
         playingtime = calcultate_playingtime(start, end)
         i, len_sheet, len_m = 0, len(sheet), len(m)
         for j in range(playingtime):
